@@ -72,4 +72,5 @@ The converted float value is: <Value of string entered converted to an float>
  //Display converted Float of string passed to function
  console.log("The converted float value is: " + convertToFloat("52.098"));
 
+ 
  //End Program
