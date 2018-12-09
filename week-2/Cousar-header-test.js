@@ -8,7 +8,7 @@
 ;===========================================
 */
 //Call header code with functions
-const header = require('../Cousar-header.js');
+const header = require('../cousar-header.js');
 
 //Display header information using display function
 console.log(header.display("Donald", "Cousar","Week 2"));
