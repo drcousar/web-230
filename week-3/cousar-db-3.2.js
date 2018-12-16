@@ -10,7 +10,6 @@
 ; Output2:  value: <param1> and value <param2> did not match
 ;===========================================
 
-
 */
 //Start Program
 
@@ -26,14 +25,14 @@ function match(param1, param2) {
 
 //Log Mismatch
 function logMismatch(param1, param2) {
-    var message = "\n value 1: " + param1 + " and value 2: " + param2 + " did not match \n";
+    var message = "\n" + param1 + " does not match " + param2;
     console.log(message);
     return message;
 }
 
 //Log Match
 function logMatch(param1, param2) {
-    var message = "\n value 1: " + param1 + " and value 2: " + param2 + " does match \n";
+    var message = "\n" + param1 + " does match " + param2;
     console.log(message);
     return message;
 }
