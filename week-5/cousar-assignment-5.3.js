@@ -28,30 +28,35 @@ console.log('\n');
 var composers = [
 
     {   
+        firstName: 'Ludwig',
         lastName: 'Beethoven',   
         genre: 'Classical',  
         rating: 8 
     },
     
     {    
+        firstName: 'Johannes',
         lastName: 'Mozart',   
         genre: 'Classical',  
         rating: 10  
     },
     
     {  
+        firstName: 'Johann',
         lastName: 'Bach',   
         genre: 'Classical',  
         rating: 9
     },
     
     {
+        firstName: 'Franz',
         lastName: 'Haydn',   
         genre: 'Classical',  
         rating: 6 
     },
     
     {
+        firstName: 'Franz',
         lastName: 'Schubert',   
         genre: 'Classical',  
         rating: 5 
