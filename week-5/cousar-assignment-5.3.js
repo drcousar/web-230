@@ -64,6 +64,7 @@ var composers = [
     
     ];
     //iterate through object
+    console.log('-- COMPOSERS --');
     composers.forEach(function(composer) {console.log("Last Name: " + composer.lastName + ", Genre: " + composer.genre + ", Rating: " + composer.rating)});
 
 //End Program
