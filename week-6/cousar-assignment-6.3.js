@@ -11,14 +11,13 @@
   Today's Date
 
   {id: 101, name: Help Desk Support, requester: Bob Jones}
-  
+
 */
 
 //Start Program
 var header = require('../cousar-header');
 console.log(header.display("Donald", "Cousar","Exersize 6.3"));
 console.log('\n');
-
 
 // object
 const ticket = {
@@ -28,5 +27,4 @@ const ticket = {
   }
 
   console.log("{id: " + ticket.id + ", name: " + ticket.name + ", requester: " + ticket.requester + "}");
-
 // End Program
