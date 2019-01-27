@@ -1,0 +1,28 @@
+<!--
+============================================
+; Title:  Debug Embedded JavaScript
+; Author: Don Cousar
+; Date:   23 January 2019
+; Description: Embedded JavaScripted with errors to debug
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debug Embedded JavaScript</title>
+</head>
+<body>
+
+<script>
+  document.write("<h1>Hello Class!</h1>')
+</script>
+
+<h1 id="myWorld"></h1>
+<script>
+  document.getElementById('myWorld').innerhtml = "Hello World!";
+</script>
+
+</body>
+</html>
