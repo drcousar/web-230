@@ -1,0 +1,52 @@
+<!--
+============================================
+; Title:  cousar-assignment-8.1.html
+; Author: Don Cousar
+; Date:   31 January 2019
+; Description: Debug jQuery
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Click</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div>
+    <p>Click the unordered list to change the color to blue</p>
+    <ul>
+        <li>Test Data</li>
+        <li>Test Data</li>
+        <li>Test Data</li>
+    </ul>
+
+    <p>Click the ordered list to change the color to brown</p>
+    <ol>
+        <li>Test Data</li>
+        <li>Test Data</li>
+        <li>Test Data</li>
+    </ol>
+</div>
+<br/>
+
+<!-- Changes background color and font color when clicking in list areas -->
+<script>
+    $(function () {
+        $("ul").click(function () {
+            css("background-color", "blue");
+            css("color", "white");
+        });
+        $("ol").click(function () {
+            $(this).css("background-color", "brown");
+            $(this).css("color", "white");
+        };
+    });
+</script>
+
+</body>
+</html>

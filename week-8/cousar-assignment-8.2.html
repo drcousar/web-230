@@ -1,0 +1,81 @@
+<!--
+;============================================
+; Title: cousar-assignment-8.2.html
+; Author: Don Cousar
+; Date:   3 February 2019
+; Description: Dynamic HTML
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+
+  <style type="text/css">
+    body{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      margin: 10;
+      background:rgb(236, 223, 223)a;
+    };
+    ul {
+      list-style: none;
+      margin: 0 auto;
+    };
+    h2 {
+      padding: 20px;
+    };
+    .fruitnav {
+      background-color: green;
+} 
+
+  </style>
+</head>
+<body>
+    <div id="fruitnav" class="">
+        <div><a class="home" href="#">Home</a></div>
+    </div>
+
+<div id="fruits"></div>
+
+<script>
+
+var fruits=[
+             {
+               id:1,
+               type:'apple',
+            },
+            {
+                id:2,
+                type:'banana',
+             },
+             {
+                id:3,
+                type:'cantalope',
+            },
+            {
+                id:4,
+                type:'strawberry'
+            },
+            {
+                id:5,
+                type:'watermelon'
+             }
+        ];
+
+var out = "<h2>Fruits</h2><ul>";
+
+for (var x = 0; x < fruits.length; x++) { 
+    out += "<li>" + fruits[x].id + " " + fruits[x].type +" </li>";   
+}
+
+out += " </ul>";
+
+document.getElementById('fruits').innerHTML = out;
+
+
+</script>
+
+</body>
+</html>
