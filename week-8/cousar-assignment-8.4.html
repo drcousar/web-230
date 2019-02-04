@@ -1,0 +1,85 @@
+<!--
+============================================
+; Title:  cousar-assignment-8.4.js
+; Author: Don Cousar
+; Date:   31 January 2019
+; Description: Alerts details of table row when clicked
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../site.css">
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+</head>
+<body>
+
+<div id="emps"></div>
+
+<script type="text/javascript">
+  // jQuery onClick event
+  // Don't remove this, just add your code to the body of the event (curly braces)
+  $(function () {
+    $("table tr").click(function () {
+      var empId =  $(this).find('td:first').html()
+      getEmployee(empId)
+    })
+  });
+var employeeList = "";
+//Instantiate constructor
+  function employeeConstructor(id, firstName, lastName, title) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.title = title;
+}
+// Populate employees array
+var employees = [
+    new employeeConstructor(1, "John", "Doe", "HR Manager"),
+    new employeeConstructor(2, "Jane", "Doe-Smith", "Secretary"),
+    new employeeConstructor(3, "Paul", "Gordon", "Sales Manager"),
+    new employeeConstructor(4, "Roger", "Bucks", "Customer Service Manager"),
+    new employeeConstructor(5, "Albert", "Jones", "CEO"),
+];
+// alert with record
+function getEmployee(empId){
+  for(x=0; x<employees.length; x++){
+    if (employees[x].id==empId){
+      alert(employees[x].id + " " + employees[x].firstName + " " + employees[x].lastName + " " + employees[x].title)
+    }
+  }
+}
+
+// build table rows
+for(x=0; x<employees.length; x++){
+  employeeList += "<tr><td>" + employees[x].id + "</td><td>" + employees[x].firstName + "</td><td>" + employees[x].lastName + "</td><td>" + employees[x].title + "</td></tr>";
+}
+
+var output = "<h1>Employee List</h1>" +
+      "<table class='tableHover'>" +
+        "<thead>" +
+        "<tr>" +
+        "<th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th>" +
+        "</tr>" +
+        "</thead>" +
+        "<tbody>" +
+        employeeList +
+        "</tbody>" +
+        "</table>";
+
+// Populate html
+document.getElementById("emps").innerHTML = output;
+</script>
+</body>
+</html>
